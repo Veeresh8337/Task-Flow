@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Task Manager Design System - Modern Productivity Theme */
+
+@layer base {
+  :root {
+    /* Core Colors - Pure whites and clean grays */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    /* Brand Colors - Blue/Purple Theme (no yellow tints) */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 249 100% 79%;
+    
+    /* Surface Colors - Pure whites */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    /* Interactive Colors - Clean grays */
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 222 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 84% 4.9%;
+
+    /* Status Colors - Clear, vibrant colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Form Elements - Clean borders */
+    --border: 214 31.8% 91.4%;
+    --input: 0 0% 100%;
+    --ring: 239 84% 67%;
+
+    /* Task Priority Colors - No yellow tints */
+    --priority-low: 142 76% 36%;
+    --priority-medium: 25 95% 53%; 
+    --priority-high: 0 84% 60%;
+    --priority-urgent: 316 73% 52%;
+
+    /* Gradients - Clean gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(249 100% 79%));
+    --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 96%));
+
+    /* Shadows - Neutral shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(222 84% 4.9% / 0.1), 0 1px 2px 0 hsl(222 84% 4.9% / 0.06);
+    --shadow-medium: 0 4px 6px -1px hsl(222 84% 4.9% / 0.1), 0 2px 4px -1px hsl(222 84% 4.9% / 0.06);
+    --shadow-large: 0 10px 15px -3px hsl(222 84% 4.9% / 0.1), 0 4px 6px -2px hsl(222 84% 4.9% / 0.05);
+    --shadow-glow: 0 0 20px hsl(239 84% 67% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core Colors - Dark Mode */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    /* Brand Colors - Enhanced for Dark */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 249 100% 79%;
+
+    /* Surface Colors */
+    --card: 225 71% 7%;
+    --card-foreground: 213 31% 91%;
+    
+    --popover: 225 71% 7%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Interactive Colors */
+    --secondary: 224 71% 10%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 224 71% 10%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 224 71% 15%;
+    --accent-foreground: 239 84% 67%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Form Elements */
+    --border: 224 71% 15%;
+    --input: 224 71% 10%;
+    --ring: 239 84% 67%;
+
+    /* Task Priority Colors - Clean colors without yellow tints */
+    --priority-low: 142 76% 36%;
+    --priority-medium: 25 95% 53%; 
+    --priority-high: 0 84% 60%;
+    --priority-urgent: 316 73% 52%;
+
+    /* Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%), hsl(249 100% 79%));
+    --gradient-surface: linear-gradient(180deg, hsl(225 71% 7%), hsl(224 71% 4%));
+    --gradient-card: linear-gradient(145deg, hsl(225 71% 7%), hsl(224 71% 10%));
+
+    /* Shadows - Enhanced for Dark */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 20px hsl(239 84% 67% / 0.5);
+
+    /* Sidebar Colors */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 71% 10%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 224 71% 15%;
+    --sidebar-ring: 239 84% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Live Indicator */
+  .live-indicator {
+    @apply relative;
+  }
+
+  .live-indicator::before {
+    content: '';
+    @apply absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-pulse;
+  }
+
+  .live-indicator::after {
+    content: '';
+    @apply absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-ping;
+  }
+
+  /* Task Card Animations */
+  .task-card {
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+
+  .task-card-dragging {
+    @apply rotate-2 scale-105 shadow-lg;
+  }
+
+  /* Priority Indicators */
+  .priority-low {
+    @apply bg-[hsl(var(--priority-low))] text-[hsl(var(--success-foreground))];
+  }
+
+  .priority-medium {
+    @apply bg-[hsl(var(--priority-medium))] text-[hsl(var(--warning-foreground))];
+  }
+
+  .priority-high {
+    @apply bg-[hsl(var(--priority-high))] text-[hsl(var(--destructive-foreground))];
+  }
+
+  .priority-urgent {
+    @apply bg-[hsl(var(--priority-urgent))] text-white;
+  }
+
+  /* Custom Gradients */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Custom Shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Mobile Sidebar Animation */
+  .sidebar-mobile-enter {
+    @apply transform translate-x-0 transition-transform duration-300 ease-out;
+  }
+
+  .sidebar-mobile-exit {
+    @apply transform -translate-x-full transition-transform duration-300 ease-in;
+  }
+}
